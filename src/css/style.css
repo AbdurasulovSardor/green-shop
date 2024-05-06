@@ -1,0 +1,85 @@
+:root {
+  --first-color: #46A358;
+  --first-color-light: #5ba56a;
+  --title-color: #3D3D3D;
+  --text-color: #727272;
+  --border-color: #FBFBFB;
+  --body-font: "Cerapro", sans-serif;
+  --biggest-font-size: 70px;
+  --h2-font-size: 30px;
+  --h3-font-size: 20px;
+  --h4-font-size: 17px;
+  --h5-font-size: 16px;
+  --description-text: 14px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--title-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Cerapro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Fontspring-DEMO-cerapro-regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Cerapro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Fontspring-DEMO-cerapro-medium.otf") format("otf");
+}
+@font-face {
+  font-family: "Cerapro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Fontspring-DEMO-cerapro-light.otf") format("otf");
+}
+@font-face {
+  font-family: "Cerapro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Fontspring-DEMO-cerapro-bold.otf") format("otf");
+}
+.card-title {
+  font-weight: 700;
+  font-size: var(--h3-font-size);
+}
+
+.footer-card {
+  font-weight: 700;
+  font-size: var(--h4-font-size);
+}
+
+.description {
+  font-weight: 400;
+  font-size: var(--description-text);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}/*# sourceMappingURL=style.css.map */

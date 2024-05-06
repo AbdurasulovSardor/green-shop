@@ -1,0 +1,21 @@
+.card-title {
+  font-weight: 700;
+  font-size: var(--h3-font-size);
+}
+
+.footer-card {
+  font-weight: 700;
+  font-size: var(--h4-font-size);
+}
+
+.description {
+  font-weight: 400;
+  font-size: var(--description-text);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
