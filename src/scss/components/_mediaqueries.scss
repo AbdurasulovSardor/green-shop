@@ -1,0 +1,25 @@
+@media screen and (max-width: 1020px) {}
+
+@media screen and (max-width: 976px) {
+  .nav {
+    &__list {
+      gap: 30px;
+    }
+
+    &__buttons {
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: var(--border-color);
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {}
