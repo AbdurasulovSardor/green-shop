@@ -1,4 +1,8 @@
+// Media 1020px
+
 @media screen and (max-width: 1020px) {}
+
+// Media 976px
 
 @media screen and (max-width: 976px) {
   .nav {
@@ -12,6 +16,8 @@
   }
 }
 
+// Media 768px
+
 @media screen and (max-width: 768px) {
   body {
     background: var(--border-color);
@@ -20,6 +26,41 @@
   .nav {
     display: none;
   }
+
+  .header__mobile {
+    display: block;
+  }
 }
 
-@media screen and (max-width: 480px) {}
+// Media 480px
+
+@media screen and (max-width: 480px) {
+  .header {
+    &__item {
+      padding: 26px 10px;
+    }
+
+    &__link svg {
+      width: 20px;
+    }
+
+    &__item--mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 65px;
+      height: 65px;
+      padding: 26px;
+
+      &::before,
+      &::after {
+        top: 46%;
+      }
+    }
+
+    &__item--mark svg {
+      display: block;
+      width: 25px;
+    }
+  }
+}
