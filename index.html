@@ -33,6 +33,7 @@
           <div class="nav__buttons">
             <button class="nav__button">
               <img src="src/icons/search.svg" alt="search" />
+              <input class="nav__search" type="text" placeholder="Find your plants">
             </button>
             <a href="#" class="nav__button nav__cart">
               <span class="nav__badge">2</span>
@@ -58,7 +59,7 @@
 
           <ul class="header__list">
             <li class="header__item">
-              <a href="#" class="header__link">
+              <a href="#" class="header__link header__link--active">
                 <svg class="header__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.61199 17.3111V14.763C7.61199 14.1125 8.14315 13.5852 8.79837 13.5852H11.1935C11.5082 13.5852 11.8099 13.7093 12.0324 13.9302C12.2549 14.1511 12.3799 14.4506 12.3799 14.763V17.3111C12.3779 17.5815 12.4847 17.8416 12.6767 18.0335C12.8686 18.2254 13.1297 18.3333 13.4021 18.3333H15.0362C15.7994 18.3353 16.532 18.0357 17.0723 17.5007C17.6127 16.9656 17.9163 16.2391 17.9163 15.4815V8.22237C17.9163 7.61037 17.6431 7.02986 17.1702 6.63721L11.6114 2.22988C10.6444 1.45712 9.25893 1.48207 8.32083 2.28914L2.88885 6.63721C2.39362 7.01828 2.09763 7.60052 2.08301 8.22237V15.4741C2.08301 17.0532 3.37249 18.3333 4.96315 18.3333H6.55992C7.1257 18.3333 7.58551 17.8802 7.5896 17.3185L7.61199 17.3111Z" />
@@ -73,7 +74,7 @@
                 </svg>
               </a>
             </li>
-            <li class="header__item header__item--active">
+            <li class="header__item header__item--mark">
               <a href="#" class="header__link">
                 <svg class="header__icon" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -120,6 +121,25 @@
     <main class="main"></main>
 
     <footer></footer>
+
+    <div class="login">
+      <div class="login__container">
+        <button class="login__close">
+          <img src="src/icons/close-modal.svg" alt="close modal" />
+        </button>
+        <div class="login__titles">
+          <h3 class="login__title login__title--active">Login</h3>
+          <h3 class="login__title">Register</h3>
+        </div>
+        <form class="login__form">
+          <p class="login__description">
+            Enter your username and password to login.
+          </p>
+          <input class="login__input" type="text" placeholder="Username" />
+          <input class="login__input" type="password" placeholder="Password" />
+        </form>
+      </div>
+    </div>
 
     <script src="src/js/script.js"></script>
   </body>
