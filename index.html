@@ -122,22 +122,47 @@
 
     <footer></footer>
 
-    <div class="login">
+    <div class="login" id="login">
       <div class="login__container">
-        <button class="login__close">
+        <button class="login__close" id="login-btn">
           <img src="src/icons/close-modal.svg" alt="close modal" />
         </button>
         <div class="login__titles">
-          <h3 class="login__title login__title--active">Login</h3>
-          <h3 class="login__title">Register</h3>
+          <a href="#" class="login__title">
+            <h3 class=" login__title--active">Login</h3>
+          </a>
+          <a href="#" class="login__title">
+            <h3 class="">Register</h3>
+          </a>
         </div>
         <form class="login__form">
           <p class="login__description">
             Enter your username and password to login.
           </p>
           <input class="login__input" type="text" placeholder="Username" />
-          <input class="login__input" type="password" placeholder="Password" />
+          <label class="login__label">
+            <input class="login__input" id="login-password" type="password" placeholder="Password" />
+            <img class="login__eye login__eye--active" src="src/icons/eye-off.svg" width="20" height="20"
+              id="login-close" alt="eye icon" />
+            <img class="login__eye" src="src/icons/eye.svg" width="20" height="20" id="login-open" alt="eye icon" />
+          </label>
+          <a class="login__forget-password" href="#">
+            Forgot Password?
+          </a>
+          <a href="#" class="login__btn">Login</a>
         </form>
+
+        <div class="login__medias">
+          <p class="login__text">Or login with</p>
+          <a href="#" class="login__media">
+            <img src="src/icons/google.svg" alt="google" />
+            Login with Google
+          </a>
+          <a href="#" class="login__media">
+            <img src="src/icons/facebook.svg" alt="google" />
+            Login with Facebook
+          </a>
+        </div>
       </div>
     </div>
 
