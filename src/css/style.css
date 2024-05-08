@@ -331,7 +331,7 @@ button {
 }
 
 .login {
-  display: flex;
+  display: none;
   align-items: center;
   position: fixed;
   top: 0;
@@ -340,11 +340,11 @@ button {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
+  padding: 0px 20px;
 }
 .login__container {
   max-width: 500px;
   width: 100%;
-  height: 600px;
   margin: 0 auto;
   background-color: #fff;
   border-bottom: 10px solid var(--first-color);
@@ -391,6 +391,11 @@ button {
   color: var(--text-color);
   margin-bottom: 14px;
 }
+.login__label {
+  display: block;
+  position: relative;
+  margin: 17px 0;
+}
 .login__input {
   font-weight: 400;
   font-size: var(--description-text);
@@ -405,6 +410,91 @@ button {
 }
 .login__input:last-child {
   margin: 17px 0;
+}
+.login__eye {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.login__eye--active {
+  display: block;
+}
+.login__forget-password {
+  display: block;
+  text-align: end;
+  font-weight: 400;
+  font-size: var(--description-text);
+  color: var(--first-color);
+  margin-bottom: 27px;
+}
+.login__forget-password:hover {
+  text-decoration: underline;
+}
+.login__btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+  font-weight: 700;
+  font-size: var(--h5-font-size);
+  color: #fff;
+  background-color: var(--first-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.login__btn:hover {
+  background-color: var(--first-color-light);
+}
+.login__medias {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 46px;
+  padding-bottom: 58px;
+}
+.login__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: var(--description-text);
+  color: var(--title-color);
+  margin-bottom: 27px;
+  text-align: center;
+}
+.login__text::before, .login__text::after {
+  content: "";
+  display: block;
+  max-width: 90px;
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  margin: 0px 10px;
+}
+.login__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+.login__media:last-child {
+  margin-bottom: 0;
+}
+
+.login-show {
+  display: flex;
 }
 
 @media screen and (max-width: 976px) {
@@ -447,5 +537,45 @@ button {
   .header__item--mark svg {
     display: block;
     width: 25px;
+  }
+  .login__titles {
+    margin-bottom: 30px;
+  }
+  .login__title {
+    font-size: 18px;
+  }
+  .login__description {
+    font-size: 12px;
+  }
+  .login__form {
+    padding: 0px 20px;
+  }
+  .login__input {
+    padding: 10px;
+  }
+  .login__input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .login__input::placeholder {
+    font-size: 12px;
+  }
+  .login__forget-password {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .login__btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .login__medias {
+    padding: 0px 20px;
+    padding-bottom: 30px;
+  }
+  .login__text {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .login__text::before, .login__text::after {
+    max-width: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
