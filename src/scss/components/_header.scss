@@ -25,6 +25,12 @@
     margin-right: 8px;
     border-radius: 10px;
     padding: 8px 0;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+
+    &:hover {
+      border-color: var(--first-color);
+    }
 
     img {
       padding: 0 10px;
@@ -214,6 +220,10 @@
       font-weight: 400;
       font-size: var(--description-text);
       color: var(--text-color);
+    }
+
+    &:focus {
+      outline: 1px solid var(--first-color);
     }
   }
 

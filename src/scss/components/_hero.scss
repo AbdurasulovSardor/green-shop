@@ -12,11 +12,14 @@
   }
 
   &__item {
+    position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 40px;
     background: var(--border-color);
+    overflow: hidden;
   }
 
   &__information {
@@ -32,8 +35,9 @@
   }
 
   &__title {
+    max-width: 510px;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 55px;
     line-height: 70px;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -53,10 +57,8 @@
   }
 
   &__image img {
-    // display: block;
     max-width: 400px;
-    height: 500px;
-    // margin-left: auto;
+    height: 550px;
     object-fit: cover;
   }
 }

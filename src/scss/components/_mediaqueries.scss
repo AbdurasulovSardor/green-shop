@@ -1,6 +1,28 @@
 // Media 1020px
 
-@media screen and (max-width: 1020px) {}
+@media screen and (max-width: 1020px) {
+
+  // HERO
+  .hero {
+    &__subtitle {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 45px;
+      line-height: 55px;
+    }
+
+    &__description {
+      font-size: 13px;
+    }
+
+    &__image img {
+      max-width: 350px;
+      height: 450px;
+    }
+  }
+}
 
 // Media 976px
 
@@ -16,7 +38,39 @@
   }
 }
 
-// Media 768px
+// MEDIA 868px
+
+@media screen and (max-width: 868px) {
+
+  // HERO
+  .hero {
+
+    &__item {
+      padding: 25px;
+    }
+
+    &__information {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 35px;
+    }
+
+    &__description {
+      max-width: 380px;
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    &__image img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+}
+
+// MEDIA 768px
 
 @media screen and (max-width: 768px) {
   body {
@@ -29,6 +83,49 @@
 
   .header__mobile {
     display: block;
+  }
+
+  .hero {
+    margin-top: 25px;
+
+    &__item {
+      background: var(--first-color-light);
+      border-radius: 30px;
+      padding: 0 20px;
+      padding-right: 0;
+    }
+
+    &__information {
+      margin: 0;
+    }
+
+    &__title {
+      max-width: 350px;
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    &__description {
+      max-width: 400px;
+
+      & span {
+        display: none;
+      }
+    }
+
+    &__image img {
+      width: 250px;
+      height: 300px;
+    }
+  }
+}
+
+// MEDIA 533px
+@media screen and (max-width: 533px) {
+
+  // HERO
+  .hero__image img {
+    margin-right: -70px;
   }
 }
 
@@ -115,6 +212,63 @@
       &::after {
         max-width: 50px;
       }
+    }
+  }
+
+  .hero {
+    &__subtitle {
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &__description {
+      font-size: 11px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__image img {
+      width: 200px;
+      height: 200px;
+    }
+
+    &__btn.btn {
+      background: transparent;
+      color: var(--first-color);
+      padding: 0;
+      font-size: 12px;
+    }
+  }
+}
+
+// MEDIA 375PX
+@media screen and (max-width: 375px) {
+
+  // HERO
+  .hero {
+    &__subtitle {
+      font-size: 8px;
+    }
+
+    &__title {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    &__description {
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    &__image img {
+      width: 150px;
+      height: 170px;
+      margin-right: -50px;
     }
   }
 }
