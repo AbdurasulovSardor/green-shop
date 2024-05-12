@@ -1,6 +1,6 @@
-// Media 1020px
-
-@media screen and (max-width: 1020px) {
+/*=============== MEDIA QUERIES ===============*/
+// MEDIA 1020px
+@media screen and (max-width: 1024px) {
 
   // HERO
   .hero {
@@ -14,6 +14,7 @@
     }
 
     &__description {
+      max-width: 450px;
       font-size: 13px;
     }
 
@@ -24,8 +25,7 @@
   }
 }
 
-// Media 976px
-
+// MEDIA 976px
 @media screen and (max-width: 976px) {
   .nav {
     &__list {
@@ -36,42 +36,26 @@
       gap: 20px;
     }
   }
-}
 
-// MEDIA 868px
-
-@media screen and (max-width: 868px) {
-
-  // HERO
   .hero {
-
-    &__item {
-      padding: 25px;
-    }
-
-    &__information {
-      padding: 0;
-    }
-
     &__title {
+      max-width: 350px;
       font-size: 35px;
+      line-height: 45px;
     }
 
     &__description {
-      max-width: 380px;
-      font-size: 12px;
-      margin-bottom: 25px;
+      max-width: 350px;
     }
 
     &__image img {
-      width: 300px;
+      max-width: 320px;
       height: 400px;
     }
   }
 }
 
 // MEDIA 768px
-
 @media screen and (max-width: 768px) {
   body {
     background: var(--border-color);
@@ -100,13 +84,13 @@
     }
 
     &__title {
-      max-width: 350px;
       font-size: 24px;
       line-height: 35px;
     }
 
     &__description {
       max-width: 400px;
+      margin-bottom: 20px;
 
       & span {
         display: none;
@@ -120,18 +104,8 @@
   }
 }
 
-// MEDIA 533px
-@media screen and (max-width: 533px) {
-
-  // HERO
-  .hero__image img {
-    margin-right: -70px;
-  }
-}
-
-// MEDIA 480px
-
-@media screen and (max-width: 480px) {
+// MEDIA 576px
+@media screen and (max-width: 576px) {
 
   // HEADER
   .header {
@@ -216,25 +190,31 @@
   }
 
   .hero {
+    &__information {
+      padding: 20px 0;
+    }
+
     &__subtitle {
-      font-size: 10px;
-      margin-bottom: 3px;
+      font-size: 11px;
     }
 
     &__title {
-      font-size: 20px;
+      max-width: 230px;
+      font-size: 24px;
       line-height: 25px;
     }
 
     &__description {
+      max-width: 230px;
       font-size: 11px;
       line-height: 20px;
       margin-bottom: 10px;
     }
 
     &__image img {
-      width: 200px;
-      height: 200px;
+      width: 170px;
+      height: 220px;
+      margin-right: -40px;
     }
 
     &__btn.btn {

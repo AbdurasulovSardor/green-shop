@@ -3,32 +3,32 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../../fonts/CeraPro-Regular.woff") format("woff");
+  src: url("../fonts/CeraPro-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Cerapro";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../../fonts/CeraPro-Medium.woff") format("woff");
+  src: url("../fonts/CeraPro-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "Cerapro";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../../fonts/CeraPro-Bold.woff") format("woff");
+  src: url("../fonts/CeraPro-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Cerapro";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../../fonts/CeraPro-Black.woff") format("woff");
+  src: url("../fonts/CeraPro-Black.woff") format("woff");
 }
 :root {
   --first-color: #46A358;
-  --first-color-light: #d0eed6;
+  --first-color-light: #C9EADB;
   --title-color: #3D3D3D;
   --text-color: #727272;
   --border-color: #f3f3f3;
@@ -347,7 +347,16 @@ button {
   overflow-x: hidden;
 }
 .hero__list {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
+}
+.hero__list::-webkit-scrollbar {
+  display: none;
 }
 .hero__item {
   position: relative;
@@ -358,6 +367,7 @@ button {
   padding-left: 40px;
   background: var(--border-color);
   overflow: hidden;
+  scroll-snap-align: start;
 }
 .hero__information {
   padding: 80px 0;
@@ -371,9 +381,9 @@ button {
 }
 .hero__title {
   max-width: 510px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 55px;
-  line-height: 70px;
+  line-height: 55px;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -389,10 +399,27 @@ button {
   line-height: 24px;
 }
 .hero__image img {
+  pointer-events: none;
   max-width: 400px;
-  height: 550px;
+  height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.hero__list.no-transition {
+  scroll-behavior: auto;
+}
+
+.hero__list.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.hero__list.dragging .hero__item {
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .login {
@@ -562,7 +589,8 @@ button {
   display: flex;
 }
 
-@media screen and (max-width: 1020px) {
+/*=============== MEDIA QUERIES ===============*/
+@media screen and (max-width: 1024px) {
   .hero__subtitle {
     font-size: 12px;
   }
@@ -571,6 +599,7 @@ button {
     line-height: 55px;
   }
   .hero__description {
+    max-width: 450px;
     font-size: 13px;
   }
   .hero__image img {
@@ -585,24 +614,16 @@ button {
   .nav__buttons {
     gap: 20px;
   }
-}
-@media screen and (max-width: 868px) {
-  .hero__item {
-    padding: 25px;
-  }
-  .hero__information {
-    padding: 0;
-  }
   .hero__title {
+    max-width: 350px;
     font-size: 35px;
+    line-height: 45px;
   }
   .hero__description {
-    max-width: 380px;
-    font-size: 12px;
-    margin-bottom: 25px;
+    max-width: 350px;
   }
   .hero__image img {
-    width: 300px;
+    max-width: 320px;
     height: 400px;
   }
 }
@@ -629,12 +650,12 @@ button {
     margin: 0;
   }
   .hero__title {
-    max-width: 350px;
     font-size: 24px;
     line-height: 35px;
   }
   .hero__description {
     max-width: 400px;
+    margin-bottom: 20px;
   }
   .hero__description span {
     display: none;
@@ -644,12 +665,7 @@ button {
     height: 300px;
   }
 }
-@media screen and (max-width: 533px) {
-  .hero__image img {
-    margin-right: -70px;
-  }
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .header__item {
     padding: 26px 10px;
   }
@@ -711,22 +727,27 @@ button {
   .login__text::before, .login__text::after {
     max-width: 50px;
   }
+  .hero__information {
+    padding: 20px 0;
+  }
   .hero__subtitle {
-    font-size: 10px;
-    margin-bottom: 3px;
+    font-size: 11px;
   }
   .hero__title {
-    font-size: 20px;
+    max-width: 230px;
+    font-size: 24px;
     line-height: 25px;
   }
   .hero__description {
+    max-width: 230px;
     font-size: 11px;
     line-height: 20px;
     margin-bottom: 10px;
   }
   .hero__image img {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 220px;
+    margin-right: -40px;
   }
   .hero__btn.btn {
     background: transparent;
