@@ -23,6 +23,11 @@
       height: 450px;
     }
   }
+
+  // CATALOG
+  .catalog__content-aside {
+    max-width: 200px;
+  }
 }
 
 // MEDIA 976px
@@ -53,10 +58,15 @@
       height: 400px;
     }
   }
+
+  // CATALOG  
+  .catalog__card-image img {
+    height: 200px;
+  }
 }
 
 // MEDIA 768px
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 775px) {
   body {
     background: var(--border-color);
   }
@@ -69,6 +79,7 @@
     display: block;
   }
 
+  // HERO
   .hero {
     margin-top: 25px;
 
@@ -100,6 +111,43 @@
     &__image img {
       width: 250px;
       height: 300px;
+    }
+  }
+
+  // CATALOG
+  .catalog {
+    &__products {
+      margin: 0;
+    }
+
+    &__content-aside {
+      display: none;
+    }
+
+    &__cards {
+      row-gap: 50px;
+    }
+
+    &__card {
+      border-radius: 20px;
+    }
+
+    &__card-image {
+      background: #fff;
+      border-radius: 20px;
+    }
+
+    &__card-button {
+      background-color: var(--border-color);
+    }
+
+    &__card-discount {
+      font-size: var(--description-text);
+      padding: 5px;
+    }
+
+    &__btn {
+      background: #fff;
     }
   }
 }
@@ -189,7 +237,10 @@
     }
   }
 
+  // HERO
   .hero {
+    margin-bottom: 20px;
+
     &__information {
       padding: 20px 0;
     }
@@ -224,6 +275,38 @@
       font-size: 12px;
     }
   }
+
+  // CATALOG
+  .catalog {
+    &__products-link {
+      font-size: var(--description-text);
+
+      &::after {
+        height: 2px;
+      }
+    }
+
+    &__products-sort {
+      display: none;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 0;
+    }
+
+    &__card:nth-child(even) {
+      margin-top: 50px;
+    }
+
+    &__card-like {
+      display: block;
+    }
+
+    &__card-buttons {
+      display: none;
+    }
+  }
 }
 
 // MEDIA 375PX
@@ -249,6 +332,35 @@
       width: 150px;
       height: 170px;
       margin-right: -50px;
+    }
+  }
+
+  // CATALOG
+  .catalog {
+
+    &__cards {
+      gap: 20px;
+    }
+
+    &__card-image img {
+      height: 150px;
+    }
+
+    &__card-like svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    &__card-title {
+      font-size: 14px;
+    }
+
+    &__card-price {
+      font-size: 14px;
+    }
+
+    &__card-price--line {
+      font-size: 12px;
     }
   }
 }
