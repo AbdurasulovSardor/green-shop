@@ -985,6 +985,7 @@ button {
 .footer__buttons {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 30px;
 }
@@ -1523,6 +1524,23 @@ button {
   .blog__item-description {
     font-size: 12px;
   }
+  .footer__information {
+    display: flex;
+    align-items: start;
+  }
+  .footer__list {
+    margin: 0;
+  }
+  .footer__join {
+    margin: 0 auto;
+  }
+  .footer__body {
+    grid-template-columns: 1fr;
+  }
+  .footer__box {
+    margin: 0 auto !important;
+    padding: 20px;
+  }
 }
 @media screen and (max-width: 375px) {
   .hero__subtitle {
@@ -1571,5 +1589,18 @@ button {
   }
   .blog__list {
     grid-template-columns: 1fr;
+  }
+  .footer__information {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  .footer__list {
+    margin: 0 auto !important;
+  }
+  .footer__social-media {
+    text-align: center;
+  }
+  .footer__buttons {
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

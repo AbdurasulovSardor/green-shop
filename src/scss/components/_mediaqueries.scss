@@ -474,6 +474,28 @@
       font-size: 12px;
     }
   }
+
+  .footer__information {
+    display: flex;
+    align-items: start;
+  }
+
+  .footer__list {
+    margin: 0;
+  }
+
+  .footer__join {
+    margin: 0 auto;
+  }
+
+  .footer__body {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__box {
+    margin: 0 auto !important;
+    padding: 20px;
+  }
 }
 
 // MEDIA 375PX
@@ -532,7 +554,6 @@
   }
 
   //CARDS
-
   .cards {
     &__list {
       grid-template-columns: 1fr;
@@ -549,5 +570,24 @@
 
   .blog__list {
     grid-template-columns: 1fr;
+  }
+
+  .footer {
+    &__information {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+    }
+
+    &__list {
+      margin: 0 auto !important;
+    }
+
+    &__social-media {
+      text-align: center;
+    }
+
+    &__buttons {
+      justify-content: center;
+    }
   }
 }
