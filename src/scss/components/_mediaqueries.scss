@@ -475,26 +475,29 @@
     }
   }
 
-  .footer__information {
-    display: flex;
-    align-items: start;
-  }
+  //FOOTER
+  .footer {
+    &__information {
+      display: flex;
+      align-items: start;
+    }
 
-  .footer__list {
-    margin: 0;
-  }
+    &__list {
+      margin: 0;
+    }
 
-  .footer__join {
-    margin: 0 auto;
-  }
+    &__join {
+      margin: 0 auto;
+    }
 
-  .footer__body {
-    grid-template-columns: 1fr;
-  }
+    &__body {
+      grid-template-columns: 1fr;
+    }
 
-  .footer__box {
-    margin: 0 auto !important;
-    padding: 20px;
+    &__box {
+      margin: 0 auto !important;
+      padding: 20px;
+    }
   }
 }
 
