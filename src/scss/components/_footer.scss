@@ -1,8 +1,15 @@
 .footer {
-  padding-bottom: 150px;
 
   &__container {
     background: var(--border-color);
+    border-bottom: 2px solid var(--first-color-light);
+  }
+
+  &__text {
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 400;
+    font-size: var(--description-text);
   }
 
   &__information {
